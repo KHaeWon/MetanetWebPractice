@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		let str = "10+20+30";
+		document.write(str+"<br>");
+		document.write("eval() >> "+eval(str)+"<br>");
+		
+		let i="100";
+		let j="200";
+		
+		document.write("결합 : "+(i+j));
+		document.write((Number(i)+Number(j)));
+		//100200300 -> 100200과 300의 결합
+		document.write("<br>결과 : "+Number(i)+Number(j)); //100200
+		document.write("<br>결과 : "+(Number(i)+Number(j))); //300
+		
+		function bodyLoad() {
+			console.log("load...");
+			let data = document.myform.money.value;
+			console.log(isNaN(data)); 
+			//isNaN : is Not a Number >> 이거 숫자 아니지 않음? false면 숫자, true면 숫자 아님
+			//false -> value=1000이므로 수
+		}
+		
+		function focusFunc() {
+			document.getElementById("myinput").style.background = "gold";
+		}
+		
+		function blurFunc() {
+			document.getElementById("myinput").style.background = "blue";
+		}
+		
+		function selectTag() {
+			const value = document.myform.sel.value;
+			console.log("value : "+value);
+		}
+		
+		function changeColor(obj) {
+			console.log(obj);
+			obj.style.backgroundColor = "gold";
+		}
+		
+		function changeColor2(obj) {
+			console.log(obj);
+			obj.style.backgroundColor = "pink";
+		}
+		
+	</script>
+</head>
+<body onload="bodyLoad()">
+	<form action="#" name="myform">
+		<input type="text" id="myinput" name="myinput" onfocus="focusFunc()" onblur="blurFunc()" >
+		<!-- onblur : 커서가 태그를 떠날 때 -->
+		<br>
+		<select name="sel" onchange="selectTag()">
+			<option value="A">AA</option>
+			<option value="B">BB</option>
+			<option value="C">CC</option>
+			<option value="D">DD</option>
+		</select>
+		<br>
+		<input type="text" onmouseover="changeColor(this)" onmouseout="changeColor2(this)">
+		<br>
+		<input type="text" value="1000" name="money"><br>
+	</form>
+</body>
+</html>

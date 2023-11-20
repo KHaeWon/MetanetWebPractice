@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		function print() {
+			let ele = document.getElementById("demo");
+			console.log(ele);//<p id="demo">demo라는 id는 p태그의 식별자</p>
+			ele.innerHTML = "집 가고 싶다";
+		}
+	</script>
+</head>
+<body>
+	<button onclick="print()">클릭</button>
+	<p id="demo">demo라는 id는 p태그의 식별자</p>
+</body>
+</html>

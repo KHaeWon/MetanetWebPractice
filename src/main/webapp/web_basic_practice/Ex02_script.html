@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+	
+	//javascript >> 웹 브라우저가 내장하고 있는 객체, 함수 사용 가능
+	window.document.write("ㅎㅇ<br>");
+	document.write("ㅎㅇㅎㅇ");//window 생략 가능
+	//java의 sysout
+	
+	//디버깅, 오류 결과를 확인하는 console.log
+	console.log("디버깅, 결과 미리보기, 오류 메시지 확인");
+	console.log(10+10);
+	
+	//변수 >> var, let, const
+	//var는 이제 사용하지 않고, 기존 코드의 유지보수 차원에서 보자
+	
+	var num; //타입이 정해져 있지 않음(정수, 실수, 날짜, 문자열 등)
+	num = 10; //값을 가지는 순간 타입 확정
+	console.log(num);//10
+	console.log(typeof(num));//number, typeof >> 무슨 타입인지 알려줌
+	
+	let element = document.forms[0].elements[0];
+	console.log(element);
+	
+	</script>
+</head>
+<body>
+	<form action="#" method="get" name="myform">
+		<input type="text" name="userid" value="hong"><br>
+		<input type="text" name="userpass" value="1004"><br>
+		<input type="submit" value="전송"><br>
+	</form>
+</body>
+<script type="text/javascript">
+	let element2 = document.forms[0].elements[0];
+	console.log(element2); //<input type="text" name="userid" value="hong">
+	console.log(element2.value); //hong
+	console.log(element2.value.length); //4
+</script>
+</html>

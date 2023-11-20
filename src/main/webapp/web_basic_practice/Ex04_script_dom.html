@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript">
+		
+		let name = "KimHaeWon";
+		
+		function call() {
+			let age=25;
+			console.log("당신의 이름은 "+name+"이고 나이는 "+age+"살입니다.");
+		}
+		call();
+		
+		let n; //초기화되지 않은 변수, 정의되지 않은 것, 에러가 아니다.
+		console.log(n);//undefined
+		n=100;
+		//사용하기 전에만 초기화하면 된다.
+		
+		let i, j;
+		i=200;
+		j=300;
+		let result=i+j;
+		console.log(result);//500
+		
+		let intnum = 10;
+		let dnum = 12.345;
+		let flag = true;
+		let str = null;
+		let str2 = "ABC";
+
+		console.log(typeof (intnum)); //number
+		console.log(typeof (dnum)); //number
+		console.log(typeof (flag)); //boolean
+		console.log(typeof (str)); //object
+		console.log(typeof (str2)); //string
+		
+		//연산자
+		let num1 = 10;
+		let num2 = 3;
+		document.write((num1 / num2) + "<br>");
+		document.write((num1 % num2) + "<br>");
+		
+		//동치 연산자
+		//=== 일치 또는 !== 불일치 연산은 타입(type)과 값(value) 두 가지가 같아야 한다.
+		console.log(1 === 1); //true
+		console.log(1 === '1'); //false
+		console.log(1 == '1'); //true
+		console.log(1 !== '1'); //true
+		console.log(1 !== 1); //false
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

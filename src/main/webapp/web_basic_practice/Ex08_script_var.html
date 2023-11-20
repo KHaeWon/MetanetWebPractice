@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<p>scope</p>
+	<p id="demo1"></p>
+	<p id="demo2"></p>
+</body>
+<script type="text/javascript">
+
+	var gname = "world"; //글로벌 변수, 현재 이 페이지 어디에든 사용 가능
+	
+	function myfunction() {
+		//함수 안
+		aaa = "아무개"; //이렇게 아무것도 안 붙이면? "글로벌 변수!!! 사용 금지"
+		console.log("함수 aaa : "+aaa); //함수 aaa : 아무개
+		
+		var carname = "volvo"; //로컬 변수
+		console.log("carname : "+carname); //carname : volvo
+		document.getElementById("demo1").innerHTML = typeof(carname) + "/" + carname + "<hr>";
+		document.getElementById("demo2").innerHTML = typeof(gname) + "/" + gname + "<hr>";
+	}
+	
+	myfunction();
+	console.log(aaa); // 아무개
+	
+</script>
+</html>
